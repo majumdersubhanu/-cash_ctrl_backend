@@ -11,7 +11,7 @@ from .serializers import UserDetailUpdateSerializer
 
 class UserRegistrationView(views.APIView):
     permission_classes = (permissions.AllowAny,)
-    parser_classes = (MultiPartParser, FormParser)  # Add this line
+    # parser_classes = (MultiPartParser, FormParser)  # Add this line
 
     def post(self, request):
         serializer = UserRegistrationSerializer(data=request.data)
