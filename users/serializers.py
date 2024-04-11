@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model, authenticate
+from django.db.models import Q
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -16,12 +17,19 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
 
 class UserLoginSerializer(serializers.Serializer):
-    email = serializers.EmailField()
+    login = serializers.CharField()
     password = serializers.CharField()
 
     def validate(self, data):
-        user = authenticate(**data)
-        if user and user.is_active:
+        login = data.get('login')
+        password = data.get('password')
+        user = User.objects.filter(
+            Q(username=login) | Q(email=login) | Q(phone_number=login)
+        ).first()
+
+        if user and user.check_password(password):
+            if not user.is_active:
+                raise serializers.ValidationError('User account is disabled.')
             return user
         raise serializers.ValidationError('Unable to log in with provided credentials.')
 
@@ -29,12 +37,7 @@ class UserLoginSerializer(serializers.Serializer):
 class UserDetailUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = [
-            'full_name', 'date_of_birth', 'gender', 'current_address', 'nationality',
-            'job_title', 'company_name', 'employment_status', 'monthly_income',
-            'account_number', 'ifsc_code', 'bank_name', 'upi_id',
-            'pan_card', 'aadhaar_card',
-        ]
+        fields = '__all__'
         extra_kwargs = {
             'full_name': {'required': True},
             'date_of_birth': {'required': True},
@@ -52,3 +55,4 @@ class UserDetailUpdateSerializer(serializers.ModelSerializer):
             'pan_card': {'required': True},
             'aadhaar_card': {'required': True},
         }
+

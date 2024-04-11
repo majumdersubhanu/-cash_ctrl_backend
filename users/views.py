@@ -35,13 +35,13 @@ class UserRegistrationView(views.APIView):
 class UserLoginView(views.APIView):
     permission_classes = (permissions.AllowAny,)
 
-    def post(self, request):
+    def post(self, request, *args, **kwargs):
         serializer = UserLoginSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.validated_data
             refresh = RefreshToken.for_user(user)
             return Response({
-                'user': UserDetailUpdateSerializer(user),
+                'user': UserDetailUpdateSerializer(user).data,  # Assuming you want all user details here
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
             })
