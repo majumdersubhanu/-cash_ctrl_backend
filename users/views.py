@@ -41,6 +41,7 @@ class UserLoginView(views.APIView):
             user = serializer.validated_data
             refresh = RefreshToken.for_user(user)
             return Response({
+                'user': UserDetailUpdateSerializer(user),
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
             })

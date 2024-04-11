@@ -4,43 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcb2c570-3b0e-4e29-9da3-159a5337d0a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cash_ctrl.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cash_ctrl/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cash_ctrl/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cash_ctrl/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cash_ctrl/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cash_ctrl/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0002_user_date_joined.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0003_user_profile_pic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+    <list default="true" id="fcb2c570-3b0e-4e29-9da3-159a5337d0a5" name="Changes" comment="expense-tracker updates">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,8 +105,26 @@
       <updated>1712679478610</updated>
       <workItem from="1712679481672" duration="152000" />
       <workItem from="1712679648179" duration="10484000" />
-      <workItem from="1712807572198" duration="72000" />
+      <workItem from="1712807572198" duration="829000" />
+      <workItem from="1712809852724" duration="698000" />
     </task>
+    <task id="LOCAL-00001" summary="expense-tracker updates">
+      <option name="closed" value="true" />
+      <created>1712807726973</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712807726974</updated>
+    </task>
+    <task id="LOCAL-00002" summary="expense-tracker updates">
+      <option name="closed" value="true" />
+      <created>1712807782773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712807782773</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,5 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="expense-tracker updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="expense-tracker updates" />
   </component>
 </project>
