@@ -11,6 +11,7 @@ from .serializers import UserDetailUpdateSerializer
 
 class UserRegistrationView(views.APIView):
     permission_classes = (permissions.AllowAny,)
+
     # parser_classes = (MultiPartParser, FormParser)  # Add this line
 
     def post(self, request):
@@ -63,3 +64,4 @@ class UserDetailUpdateView(generics.UpdateAPIView):
             return Response(serializer.data)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+

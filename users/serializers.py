@@ -55,4 +55,3 @@ class UserDetailUpdateSerializer(serializers.ModelSerializer):
             'pan_card': {'required': True},
             'aadhaar_card': {'required': True},
         }
-
