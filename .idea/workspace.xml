@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fcb2c570-3b0e-4e29-9da3-159a5337d0a5" name="Changes" comment="parser class changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/transactions/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transactions/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/transactions/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cash_ctrl/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cash_ctrl/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
       <workItem from="1712807572198" duration="829000" />
       <workItem from="1712809852724" duration="3458000" />
       <workItem from="1712819859428" duration="2001000" />
-      <workItem from="1712992106134" duration="2507000" />
+      <workItem from="1712992106134" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="expense-tracker updates">
       <option name="closed" value="true" />
