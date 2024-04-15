@@ -1,5 +1,8 @@
 from rest_framework import permissions, viewsets
-from .models import Transaction
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+
+from .models import Transaction, PeerToPeer
 from .serializers import TransactionSerializer
 from django.db.models import Sum
 from django.db.models.functions import TruncMonth, TruncYear
@@ -91,3 +94,19 @@ class TransactionViewSet(viewsets.ModelViewSet):
             date__year=current_year
         ).annotate(month=TruncMonth('date')).values('month').annotate(total_amount=Sum('amount')).order_by('month')
         return Response([item['total_amount'] for item in month_wise_expenses])
+
+
+class PeerToPeerView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self):
+        return PeerToPeer.objects.all().filter(
+            user=self.request.user
+        )
+
+    def post(self):
+        return PeerToPeer.objects.create(
+            user=self,
+            transaction_type='peer_to_peer'
+
+        )

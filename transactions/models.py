@@ -28,3 +28,28 @@ class Transaction(models.Model):
 
     class Meta:
         verbose_name_plural = 'Transactions'
+
+
+class PeerToPeer(models.Model):
+    lender = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='lent_peertopeer_transactions',  # unique related name for lender
+        verbose_name='Lender'
+    )
+    borrower = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='borrowed_peertopeer_transactions',  # unique related name for borrower
+        verbose_name='Borrower'
+    )
+    name = models.CharField(max_length=255)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    date = models.DateTimeField(auto_now_add=True)
+    paid = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.name} - Borrower: {self.borrower}, Lender: {self.lender}"
+
+    class Meta:
+        verbose_name_plural = 'Peer To Peers'
